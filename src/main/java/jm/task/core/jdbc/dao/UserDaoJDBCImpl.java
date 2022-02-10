@@ -23,18 +23,12 @@ public class UserDaoJDBCImpl implements UserDao {
 
     public void createUsersTable() {
         try (Statement statement = connection.createStatement()) {
-            String sql = "SELECT * FROM Users";
-            try {
-                statement.execute(sql);
-                return;                 //return if table exist, else catch exception and create table
-            } catch (Exception e) {
-            }
-            sql = "CREATE TABLE Users " +
-                    "(id INT not NULL AUTO_INCREMENT, " +
-                    "name VARCHAR(50), " +
-                    "lastName VARCHAR(50), " +
-                    "age INTEGER not NULL, " +
-                    "PRIMARY KEY (id))";
+            String sql = "CREATE TABLE IF NOT EXISTS Users " +
+                        "(id INT not NULL AUTO_INCREMENT, " +
+                        "name VARCHAR(50), " +
+                        "lastName VARCHAR(50), " +
+                        "age INTEGER not NULL, " +
+                        "PRIMARY KEY (id))";
             statement.executeUpdate(sql);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -43,13 +37,7 @@ public class UserDaoJDBCImpl implements UserDao {
 
     public void dropUsersTable() {
         try (Statement statement = connection.createStatement()) {
-            String sql = "SELECT * FROM Users";
-            try {
-                statement.execute(sql);//return if table exist, else catch exception and return
-            } catch (Exception e) {
-                return;
-            }
-            sql = "DROP TABLE Users ";
+            String sql = "DROP TABLE IF EXISTS Users ";
             statement.executeUpdate(sql);
         } catch (SQLException e) {
             e.printStackTrace();
