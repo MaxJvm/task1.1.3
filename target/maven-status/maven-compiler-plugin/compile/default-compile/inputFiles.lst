@@ -1,0 +1,8 @@
+/home/maxim/IdeaProjects/PP_1_1_3-4_JDBC_Hibernate/src/main/java/jm/task/core/jdbc/service/UserService.java
+/home/maxim/IdeaProjects/PP_1_1_3-4_JDBC_Hibernate/src/main/java/jm/task/core/jdbc/dao/UserDaoHibernateImpl.java
+/home/maxim/IdeaProjects/PP_1_1_3-4_JDBC_Hibernate/src/main/java/jm/task/core/jdbc/util/Util.java
+/home/maxim/IdeaProjects/PP_1_1_3-4_JDBC_Hibernate/src/main/java/jm/task/core/jdbc/dao/UserDao.java
+/home/maxim/IdeaProjects/PP_1_1_3-4_JDBC_Hibernate/src/main/java/jm/task/core/jdbc/dao/UserDaoJDBCImpl.java
+/home/maxim/IdeaProjects/PP_1_1_3-4_JDBC_Hibernate/src/main/java/jm/task/core/jdbc/service/UserServiceImpl.java
+/home/maxim/IdeaProjects/PP_1_1_3-4_JDBC_Hibernate/src/main/java/jm/task/core/jdbc/Main.java
+/home/maxim/IdeaProjects/PP_1_1_3-4_JDBC_Hibernate/src/main/java/jm/task/core/jdbc/model/User.java
