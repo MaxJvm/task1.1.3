@@ -13,5 +13,6 @@ public class Main {
         service.getAllUsers().forEach(System.out::println);
         service.cleanUsersTable();
         service.dropUsersTable();
+        service.close();
     }
 }
