@@ -46,7 +46,7 @@ public class UserDaoHibernateImpl implements UserDao {
     public void saveUser(String name, String lastName, byte age) {
         Session session = Util.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        User user = new User(name, lastName,age);
+        User user = new User(name, lastName, age);
         session.save(user);
         transaction.commit();
         session.close();
@@ -56,7 +56,7 @@ public class UserDaoHibernateImpl implements UserDao {
     public void removeUserById(long id) {
         Session session = Util.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        session.delete(session.get(User.class,id));
+        session.delete(session.get(User.class, id));
         transaction.commit();
         session.close();
     }
@@ -78,7 +78,7 @@ public class UserDaoHibernateImpl implements UserDao {
         Session session = Util.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         String sql = "TRUNCATE TABLE " + User.class.getSimpleName();
-        Query <User> query = session.createNativeQuery(sql);
+        Query<User> query = session.createNativeQuery(sql);
         query.executeUpdate();
         transaction.commit();
         session.close();
